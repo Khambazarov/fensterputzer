@@ -5,10 +5,47 @@ import Layout from "../layouts/Layout.astro";
   title="Fensterreinigung in Hamburg & Norderstedt"
   description="Streifenfreie Fensterreinigung für privat & Gewerbe – schnell, sauber, fair."
 >
-  <h1 class="mt-10 text-3xl md:text-5xl font-bold tracking-tight">
-    Fensterreinigung in <span class="text-blue-600">Hamburg & Norderstedt</span>
-  </h1>
-  <p class="mt-4 max-w-prose">
-    Professionell, zuverlässig und transparent – jetzt unverbindlich anfragen.
-  </p>
+  <!-- HERO -->
+  <section class="py-16 md:py-24">
+    <div class="mx-auto max-w-3xl">
+      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">
+        Fensterreinigung in
+        <span class="text-blue-600">Hamburg &amp; Norderstedt</span>
+      </h1>
+
+      <p class="mt-5 text-lg text-slate-600 dark:text-slate-300">
+        Professionell, zuverlässig und transparent – jetzt unverbindlich anfragen.
+      </p>
+
+      <!-- CTAs: Anrufen + WhatsApp -->
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <!-- Direkt anrufen -->
+        <a
+          href="tel:+4917629633132"
+          class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-5 py-3 font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-slate-900"
+          aria-label="Jetzt anrufen: +49 176 29633132"
+        >
+          Jetzt anrufen
+        </a>
+
+        <!-- WhatsApp: vorbefüllte Nachricht -->
+        <a
+          href="https://wa.me/4917629633132?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihre%20Fensterreinigung%20in%20Hamburg%20und%20Norderstedt."
+          target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center justify-center rounded-lg border px-5 py-3 font-medium text-green-700 border-green-600 hover:bg-green-50 dark:text-green-300 dark:border-green-400 dark:hover:bg-green-900/30 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-slate-900"
+          aria-label="Per WhatsApp anfragen"
+        >
+          Per WhatsApp anfragen
+        </a>
+      </div>
+
+      <!-- kleine Trust-Row -->
+      <ul class="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-slate-500 dark:text-slate-400">
+        <li>✔&nbsp;Privat &amp; Gewerbe</li>
+        <li>✔&nbsp;Kurzfristige Termine</li>
+        <li>✔&nbsp;Festpreise ab 49&nbsp;€</li>
+      </ul>
+    </div>
+  </section>
 </Layout>
+
