@@ -10,5 +10,18 @@
   },
   "dependencies": {
     "astro": "^5.14.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.14",
+    "tailwindcss": "^4.1.14"
+  },
+  "tailwind": {
+    "darkMode": [
+      "class",
+      ".dark"
+    ],
+    "content": [
+      "./src/**/*.{astro,html,js,ts,jsx,tsx}"
+    ]
   }
 }
