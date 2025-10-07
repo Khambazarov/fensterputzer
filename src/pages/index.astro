@@ -1,9 +1,14 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
-
-<Layout>
-	<h1 class="text-3xl text-blue-600">TEST: Tailwind v4</h1>
-	<Welcome />
+<Layout
+  title="Fensterreinigung in Hamburg & Norderstedt"
+  description="Streifenfreie Fensterreinigung für privat & Gewerbe – schnell, sauber, fair."
+>
+  <h1 class="mt-10 text-3xl md:text-5xl font-bold tracking-tight">
+    Fensterreinigung in <span class="text-blue-600">Hamburg & Norderstedt</span>
+  </h1>
+  <p class="mt-4 max-w-prose">
+    Professionell, zuverlässig und transparent – jetzt unverbindlich anfragen.
+  </p>
 </Layout>

@@ -1,27 +1,57 @@
 ---
 import "../styles/global.css";
-const { title, description } = Astro.props;
+
+const {
+  title = "Fensterreinigung Hamburg & Norderstedt – [Name]",
+  description = "Professionelle Fensterreinigung für privat & gewerblich in Hamburg und Norderstedt. Schnell, sauber, fair.",
+} = Astro.props;
+
+// funktioniert perfekt, wenn du später `site` in astro.config setzt
+const canonical = Astro.url?.href ?? "/";
 ---
-
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content="/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Theme Color (wir fügen später den Toggle hinzu) -->
+    <meta name="theme-color" content="#ffffff" />
+    
+    <!-- JSON-LD Hook (Platzhalter; füllen wir später) -->
+    <script type="application/ld+json">
+      {JSON.stringify({
+        "@context":"https://schema.org",
+        "@type":"LocalBusiness",
+        "name":"[Name Fensterreinigung]",
+        "url": canonical,
+        "telephone":"+49...",
+        "address": { "@type":"PostalAddress", "addressLocality":"Hamburg", "postalCode":"20...", "addressCountry":"DE" },
+        "areaServed": ["Hamburg","Norderstedt"]
+      })}
+    </script>
+  </head>
+  <body class="min-h-screen bg-white text-slate-900">
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:px-3 focus:py-2 focus:bg-yellow-200 focus:text-black rounded">
+      Zum Inhalt springen
+    </a>
+
+    <div class="mx-auto max-w-6xl px-4">
+      <main id="main">
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>
