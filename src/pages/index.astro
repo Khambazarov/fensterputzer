@@ -1,6 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
 ---
+
+<!-- 
+
+ -->
+
 <Layout
   title="Fensterreinigung in Hamburg & Norderstedt"
   description="Streifenfreie Fensterreinigung für privat & Gewerbe – schnell, sauber, fair."
@@ -12,22 +17,14 @@ import Layout from "../layouts/Layout.astro";
         Fensterreinigung in
         <span class="text-blue-600">Hamburg &amp; Norderstedt</span>
       </h1>
-
       <p class="mt-5 text-lg text-slate-600 dark:text-slate-300">
         Professionell, zuverlässig und transparent – jetzt unverbindlich anfragen.
       </p>
-
-      <!-- CTAs: Anrufen + WhatsApp -->
       <div class="mt-8 flex flex-col sm:flex-row gap-3">
-        <!-- Direkt anrufen -->
-        <a
-          href="tel:+4917629633132"
-          class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-5 py-3 font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-slate-900"
-          aria-label="Jetzt anrufen: +49 176 29633132"
-        >
+        <a href="tel:+4917629633132"
+           class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-5 py-3 font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-slate-900">
           Jetzt anrufen
         </a>
-
         <!-- WhatsApp: vorbefüllte Nachricht -->
         <a
           href="https://wa.me/4917629633132?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihre%20Fensterreinigung%20in%20Hamburg%20und%20Norderstedt."
@@ -37,9 +34,11 @@ import Layout from "../layouts/Layout.astro";
         >
           Per WhatsApp anfragen
         </a>
+        <a href="#kontakt"
+           class="inline-flex items-center justify-center rounded-lg border px-5 py-3 font-medium text-slate-900 hover:bg-slate-100 dark:text-slate-100 dark:border-slate-700 dark:hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-slate-900">
+          Angebot anfragen
+        </a>
       </div>
-
-      <!-- kleine Trust-Row -->
       <ul class="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-slate-500 dark:text-slate-400">
         <li>✔&nbsp;Privat &amp; Gewerbe</li>
         <li>✔&nbsp;Kurzfristige Termine</li>
@@ -47,5 +46,36 @@ import Layout from "../layouts/Layout.astro";
       </ul>
     </div>
   </section>
+
+  <!-- LEISTUNGEN -->
+  <section id="leistungen" class="scroll-mt-24 py-16 md:py-20 border-t border-slate-200 dark:border-slate-800">
+    <h2 class="text-2xl md:text-3xl font-bold">Leistungen</h2>
+    <p class="mt-3 text-slate-600 dark:text-slate-300">Kurzbeschreibung folgt …</p>
+  </section>
+
+  <!-- PREISE -->
+  <section id="preise" class="scroll-mt-24 py-16 md:py-20 border-t border-slate-200 dark:border-slate-800">
+    <h2 class="text-2xl md:text-3xl font-bold">Preise</h2>
+    <p class="mt-3 text-slate-600 dark:text-slate-300">Preisinfo/„ab“-Preise folgen …</p>
+  </section>
+
+  <!-- GALERIE -->
+  <section id="galerie" class="scroll-mt-24 py-16 md:py-20 border-t border-slate-200 dark:border-slate-800">
+    <h2 class="text-2xl md:text-3xl font-bold">Galerie</h2>
+    <p class="mt-3 text-slate-600 dark:text-slate-300">Vorher/Nachher-Bilder folgen …</p>
+  </section>
+
+  <!-- BEWERTUNGEN -->
+  <section id="bewertungen" class="scroll-mt-24 py-16 md:py-20 border-t border-slate-200 dark:border-slate-800">
+    <h2 class="text-2xl md:text-3xl font-bold">Bewertungen</h2>
+    <p class="mt-3 text-slate-600 dark:text-slate-300">Kundenstimmen folgen …</p>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt" class="scroll-mt-24 py-16 md:py-20 border-t border-slate-200 dark:border-slate-800">
+    <h2 class="text-2xl md:text-3xl font-bold">Kontakt</h2>
+    <p class="mt-3 text-slate-600 dark:text-slate-300">Kontaktformular kommt im nächsten Schritt.</p>
+  </section>
 </Layout>
+
 
