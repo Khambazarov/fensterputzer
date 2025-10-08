@@ -71,11 +71,106 @@ import Layout from "../layouts/Layout.astro";
     <p class="mt-3 text-slate-600 dark:text-slate-300">Kundenstimmen folgen …</p>
   </section>
 
-  <!-- KONTAKT -->
+    <!-- KONTAKT -->
   <section id="kontakt" class="scroll-mt-24 py-16 md:py-20 border-t border-slate-200 dark:border-slate-800">
     <h2 class="text-2xl md:text-3xl font-bold">Kontakt</h2>
-    <p class="mt-3 text-slate-600 dark:text-slate-300">Kontaktformular kommt im nächsten Schritt.</p>
+    <p class="mt-3 text-slate-600 dark:text-slate-300">
+      Schnell antworten wir per Telefon, WhatsApp oder Formular.
+    </p>
+
+    <div class="mt-8 grid gap-8 md:grid-cols-2">
+      <!-- Direkt-Kontakte -->
+      <div class="space-y-3 text-sm">
+        <a href="tel:+4917629633132" class="inline-flex items-center gap-2 rounded-lg border px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800">
+          <span class="font-medium">Anrufen</span>
+          <span class="text-slate-500 dark:text-slate-400">+49 176 29633132</span>
+        </a>
+        <a
+          href="https://wa.me/4917629633132?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihre%20Fensterreinigung%20in%20Hamburg%20und%20Norderstedt."
+          target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 rounded-lg border px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800"
+        >
+          <span class="font-medium">WhatsApp</span>
+          <span class="text-slate-500 dark:text-slate-400">Nachricht senden</span>
+        </a>
+      </div>
+
+      <!-- Formular -->
+      <form
+        action="/api/contact"
+        method="POST"
+        class="grid gap-4"
+        aria-describedby="form-hinweis"
+      >
+        <!-- Honeypot -->
+        <input type="text" name="website" class="hidden" tabindex="-1" autocomplete="off" />
+
+        <div class="grid gap-1">
+          <label for="name" class="font-medium">Name *</label>
+          <input id="name" name="name" required
+                 class="rounded border px-3 py-2 outline-none focus:ring-2 focus:ring-blue-600"
+                 autocomplete="name" />
+        </div>
+
+        <div class="grid gap-1">
+          <label for="email" class="font-medium">E-Mail *</label>
+          <input id="email" name="email" type="email" required
+                 class="rounded border px-3 py-2 outline-none focus:ring-2 focus:ring-blue-600"
+                 autocomplete="email" inputmode="email" />
+        </div>
+
+        <div class="grid gap-1">
+          <label for="telefon" class="font-medium">Telefon (optional)</label>
+          <input id="telefon" name="telefon" type="tel"
+                 class="rounded border px-3 py-2 outline-none focus:ring-2 focus:ring-blue-600"
+                 autocomplete="tel" inputmode="tel" />
+        </div>
+
+        <div class="grid gap-1">
+          <label for="kunde" class="font-medium">Ich bin *</label>
+          <select id="kunde" name="kunde" required
+                  class="rounded border px-3 py-2 outline-none focus:ring-2 focus:ring-blue-600">
+            <option value="" selected disabled>Bitte wählen…</option>
+            <option value="privat">Privatkunde</option>
+            <option value="gewerbe">Gewerbe</option>
+          </select>
+        </div>
+
+        <div class="grid gap-1">
+          <label for="ort" class="font-medium">Ort/PLZ (optional)</label>
+          <input id="ort" name="ort"
+                 class="rounded border px-3 py-2 outline-none focus:ring-2 focus:ring-blue-600"
+                 autocomplete="postal-code address-level2" />
+        </div>
+
+        <div class="grid gap-1">
+          <label for="nachricht" class="font-medium">Nachricht *</label>
+          <textarea id="nachricht" name="nachricht" required rows="4"
+                    class="rounded border px-3 py-2 outline-none focus:ring-2 focus:ring-blue-600"
+                    placeholder="Kurz: Was soll gereinigt werden? Anzahl Fenster, Etage, Wunschtermin …"></textarea>
+        </div>
+
+        <div class="flex items-start gap-2 text-sm">
+          <input id="ds" name="datenschutz" type="checkbox" required class="mt-1" />
+          <label for="ds" class="text-slate-600 dark:text-slate-300">
+            Ich habe die <a href="/datenschutz" class="underline">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Angaben zum Zweck der Kontaktaufnahme zu.
+          </label>
+        </div>
+
+        <p id="form-hinweis" class="text-xs text-slate-500">
+          Pflichtfelder sind mit * gekennzeichnet. Wir antworten i. d. R. innerhalb eines Werktags.
+        </p>
+
+        <div class="pt-2">
+          <button type="submit"
+                  class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-5 py-3 font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white">
+            Anfrage senden
+          </button>
+        </div>
+      </form>
+    </div>
   </section>
+
 </Layout>
 
 
