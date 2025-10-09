@@ -1,0 +1,49 @@
+---
+const year = new Date().getFullYear();
+---
+<footer class="mt-16 border-t border-slate-200 dark:border-slate-800">
+  <div class="mx-auto max-w-6xl px-4 py-10 grid gap-8 md:grid-cols-3 text-sm">
+    <!-- Brand / Kurzinfo -->
+    <div class="space-y-2">
+      <a href="/" class="inline-flex items-center gap-2 font-semibold tracking-tight">
+        <img src="/logo.png" alt="Fensterputzer A&G" width="120" height="36" class="h-6 w-auto" />
+        <span class="sr-only">Startseite</span>
+      </a>
+      <p class="text-slate-600 dark:text-slate-300">
+        Streifenfreie Fensterreinigung in Hamburg &amp; Norderstedt.
+      </p>
+      <p class="text-slate-500 dark:text-slate-400">
+        © {year} Fensterputzer A&amp;G
+      </p>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="space-y-2">
+      <div class="font-medium">Navigation</div>
+      <ul class="grid gap-1 text-slate-600 dark:text-slate-300">
+        <li><a href="#leistungen"   class="hover:text-slate-900 dark:hover:text-white">Leistungen</a></li>
+        <li><a href="#preise"       class="hover:text-slate-900 dark:hover:text-white">Preise</a></li>
+        <li><a href="#galerie"      class="hover:text-slate-900 dark:hover:text-white">Galerie</a></li>
+        <li><a href="#bewertungen"  class="hover:text-slate-900 dark:hover:text-white">Bewertungen</a></li>
+        <li><a href="#kontakt"      class="hover:text-slate-900 dark:hover:text-white">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <!-- Recht & Kontakt -->
+    <div class="space-y-2">
+      <div class="font-medium">Recht &amp; Kontakt</div>
+      <ul class="grid gap-1 text-slate-600 dark:text-slate-300">
+        <li><a href="/impressum"   class="hover:text-slate-900 dark:hover:text-white">Impressum</a></li>
+        <li><a href="/datenschutz" class="hover:text-slate-900 dark:hover:text-white">Datenschutz</a></li>
+        <li><a href="tel:+4917629633132" class="hover:text-slate-900 dark:hover:text-white">+49&nbsp;176&nbsp;29633132</a></li>
+        <li>
+          <a href="https://wa.me/4917629633132?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihre%20Fensterreinigung%20in%20Hamburg%20und%20Norderstedt."
+             target="_blank" rel="noopener noreferrer"
+             class="hover:text-slate-900 dark:hover:text-white">
+            WhatsApp Nachricht
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
