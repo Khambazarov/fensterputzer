@@ -4,4 +4,4 @@ Disallow: /api/
 Disallow: /danke
 
 # (Optional) set absolute URL after domain is live:
-# Sitemap: https://deine-domain.de/sitemap-index.xml
+# Sitemap: https://fensterputzer.netlify.app/sitemap-index.xml
