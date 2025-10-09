@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang="de"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Impressum</title><meta name="description" content="Anbieterkennzeichnung nach § 5 TMG."><link rel="canonical" href="https://fensterputzer.netlify.app/impressum/"><!-- Open Graph --><meta property="og:title" content="Impressum"><meta property="og:description" content="Anbieterkennzeichnung nach § 5 TMG."><meta property="og:type" content="website"><meta property="og:url" content="https://fensterputzer.netlify.app/impressum/"><meta property="og:image" content="/og-image.jpg"><meta name="twitter:card" content="summary_large_image"><!-- Theme color (Wir fügen später den Toggle hinzu) --><meta name="theme-color" content="#ffffff"><!-- JSON-LD Hook (Platzhalter; füllen wir später) --><script type="application/ld+json">
+      {JSON.stringify({
+        "@context":"https://fensterputzer.netlify.app",
+        "@type":"LocalBusiness",
+        name:"Fensterputzer A&G",
+        url: canonical,
+        telephone:"+4917629633132",
+        address:{ "@type":"PostalAddress", addressLocality:"Norderstedt", postalCode:"22846", addressCountry:"DE" },
+        areaServed:["Hamburg","Norderstedt"]
+      })}
+    </script><link rel="stylesheet" href="/_astro/danke.DyRT2eqy.css"></head> <body class="min-h-screen bg-white text-slate-900"> <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:px-3 focus:py-2 focus:bg-yellow-200 focus:text-black rounded">
+Zum Inhalt springen
+</a> <header class="sticky top-0 z-50 border-b border-slate-200/70 bg-white/80 backdrop-blur"> <div class="mx-auto max-w-6xl px-4"> <div class="flex items-center justify-between h-14"> <!-- Brand --> <a href="/" class="flex items-center gap-2 min-w-0" aria-label="Startseite"> <!-- Tipp: wenn verfügbar, /logo.svg bevorzugen --> <img src="/logo.png" alt="Fensterputzer A&G" width="160" height="48" class="h-8 md:h-10 w-auto select-none" decoding="async" fetchpriority="high" draggable="false"> </a> <!-- Desktop-Navigation (>= md sichtbar) --> <nav class="hidden md:flex items-center gap-6 text-sm text-slate-700"> <a href="#leistungen" class="hover:text-slate-900">Leistungen</a><a href="#preise" class="hover:text-slate-900">Preise</a><a href="#galerie" class="hover:text-slate-900">Galerie</a><a href="#bewertungen" class="hover:text-slate-900">Bewertungen</a><a href="#kontakt" class="hover:text-slate-900">Kontakt</a> <a href="tel:+4917629633132" class="inline-flex items-center rounded-lg bg-blue-600 px-4 py-2 font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white">
+Anrufen
+</a> </nav> <!-- Mobile: Burger-Menü (nur < md sichtbar) --> <details class="relative md:hidden" data-burger> <summary class="list-none cursor-pointer rounded px-3 py-2 border border-slate-300 text-sm text-slate-700 hover:bg-slate-50 inline-flex items-center gap-2" aria-label="Menü öffnen" aria-haspopup="menu" aria-expanded="false" role="button"> <!-- Burger-Icon --> <svg viewBox="0 0 24 24" class="h-5 w-5" aria-hidden="true" fill="currentColor"> <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path> </svg> <span class="sr-only">Menü</span> </summary> <!-- Dropdown --> <div class="absolute right-0 mt-2 w-56 rounded-lg border border-slate-200 bg-white p-2 shadow-lg" role="menu" aria-label="Mobile Navigation"> <nav class="flex flex-col"> <a href="#leistungen" class="rounded px-3 py-2 text-sm text-slate-700 hover:bg-slate-100" role="menuitem"> Leistungen </a><a href="#preise" class="rounded px-3 py-2 text-sm text-slate-700 hover:bg-slate-100" role="menuitem"> Preise </a><a href="#galerie" class="rounded px-3 py-2 text-sm text-slate-700 hover:bg-slate-100" role="menuitem"> Galerie </a><a href="#bewertungen" class="rounded px-3 py-2 text-sm text-slate-700 hover:bg-slate-100" role="menuitem"> Bewertungen </a><a href="#kontakt" class="rounded px-3 py-2 text-sm text-slate-700 hover:bg-slate-100" role="menuitem"> Kontakt </a> <a href="tel:+4917629633132" class="mt-1 rounded px-3 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700" role="menuitem">
+Anrufen
+</a> </nav> </div> </details> </div> </div> </header> <!-- Close-Logic: Outside-Click, Escape, Link-Klick; aria-expanded aktuell halten --> <script>
+  (function () {
+    var d = document.querySelector('header details[data-burger]');
+    if (!d) return;
+
+    // aria-expanded aktualisieren
+    d.addEventListener('toggle', function () {
+      var s = d.querySelector('summary');
+      if (s) s.setAttribute('aria-expanded', String(d.open));
+    });
+
+    // Outside click -> schließen
+    document.addEventListener('click', function (e) {
+      if (!d.open) return;
+      if (!d.contains(e.target)) d.open = false;
+    });
+
+    // ESC -> schließen
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && d.open) d.open = false;
+    });
+
+    // Link-Klick im Menü -> schließen
+    d.addEventListener('click', function (e) {
+      var a = e.target && e.target.closest ? e.target.closest('a') : null;
+      if (a) d.open = false;
+    });
+  })();
+</script> <div class="mx-auto max-w-6xl px-4"> <main id="main">  <section class="py-16 md:py-24"> <div class="mx-auto max-w-3xl prose prose-slate dark:prose-invert"> <h1>Impressum</h1> <h2>Anbieter</h2> <p>
+Fensterputzer A&amp;G<br>
+Inh. Artur Badalov<br>
+[Straße Hausnummer]<br>
+[PLZ] [Ort]
+</p> <h3>Kontakt</h3> <p>
+Telefon: <a href="tel:+49XXXXXXXXX">+49&nbsp;XX&nbsp;XX&nbsp;XX</a><br>
+E-Mail: <a href="mailto:kontakt@deine-domain.de">kontakt@deine-domain.de</a><br>
+Website: <a href="/">deine-domain.de</a> </p> <h3>Umsatzsteuer</h3> <p>
+USt-IdNr.: [DE123456789] (falls vorhanden)<br>
+oder: Kleinunternehmer gem. § 19 UStG (falls zutreffend).
+</p> <h3>Berufsbezeichnung</h3> <p>Dienstleister im Bereich Fensterreinigung.</p> <h3>Verantwortlich i.S.d. § 55 Abs. 2 RStV</h3> <p>
+Artur Badalov<br>
+[Straße Hausnummer]<br>
+[PLZ] [Ort]
+</p> <h3>EU-Streitschlichtung</h3> <p>
+Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
+<a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>.
+        Wir sind nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+</p> <h3>Haftung für Inhalte</h3> <p>
+Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
+        Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen
+        oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von
+        Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der
+        Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden entsprechender Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
+</p> <h3>Haftung für Links</h3> <p>
+Unser Angebot enthält Links zu externen Websites, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine
+        Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten
+        wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.
+        Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar.
+        Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
+</p> <h3>Urheberrecht</h3> <p>
+Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht.
+        Beiträge Dritter sind als solche gekennzeichnet. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb
+        der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+</p> </div> </section>  </main> </div> </body></html>

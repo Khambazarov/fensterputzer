@@ -1,0 +1,7 @@
+# Allow all
+User-agent: *
+Disallow: /api/
+Disallow: /danke
+
+# (Optional) set absolute URL after domain is live:
+# Sitemap: https://fensterputzer.netlify.app/sitemap-index.xml
