@@ -171,20 +171,36 @@ import Layout from "../layouts/Layout.astro";
         <p><strong>Transparenz:</strong> Endpreise nach kurzer Besichtigung oder Fotos. Anfahrt in Hamburg &amp; Norderstedt fair kalkuliert.</p>
       </div>
 
+            <!-- CTAs -->
       <div class="mt-8 flex flex-col sm:flex-row gap-3">
-        <a
-          href="tel:+4917629633132"
-          class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-5 py-3 font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white"
-        >
-          Jetzt Preis anfragen
-        </a>
+        <!-- Primär: führt zur Kontakt-Sektion (dort Telefon, WhatsApp, Formular) -->
         <a
           href="#kontakt"
-          class="inline-flex items-center justify-center rounded-lg border px-5 py-3 font-medium text-slate-900 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white"
+          class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-5 py-3 font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white"
         >
-          Angebot per Formular
+          Kontakt aufnehmen
+        </a>
+
+        <!-- Anrufen -->
+        <a
+          href="tel:+4917629633132"
+          class="inline-flex items-center justify-center rounded-lg border px-5 py-3 font-medium text-slate-900 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white"
+          aria-label="Jetzt anrufen: +49 176 29633132"
+        >
+          Anrufen
+        </a>
+
+        <!-- WhatsApp (vorbefüllt) -->
+        <a
+          href="https://wa.me/4917629633132?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihre%20Fensterreinigung%20in%20Hamburg%20und%20Norderstedt."
+          target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center justify-center rounded-lg border border-green-600 px-5 py-3 font-medium text-green-700 hover:bg-green-50 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2 focus:ring-offset-white"
+          aria-label="Per WhatsApp anfragen"
+        >
+          WhatsApp
         </a>
       </div>
+
     </div>
   </section>
 
