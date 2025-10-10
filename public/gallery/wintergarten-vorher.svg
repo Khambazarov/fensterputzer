@@ -1,5 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900">
+<!-- <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900">
   <rect width="100%" height="100%" fill="#e2e8f0"/>
   <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
         font-family="system-ui" font-size="48" fill="#334155">VORHER · WINTERGARTEN</text>
+</svg> -->
+
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="450" viewBox="0 0 600 450">
+  <rect width="600" height="450" fill="#eef2f7"/>
+  <g stroke="#94a3b8" fill="#cbd5e1">
+    <rect x="70" y="80" width="460" height="280" rx="8"/>
+    <line x1="70" y1="170" x2="530" y2="170"/><line x1="70" y1="260" x2="530" y2="260"/>
+    <line x1="200" y1="80" x2="200" y2="360"/><line x1="330" y1="80" x2="330" y2="360"/><line x1="460" y1="80" x2="460" y2="360"/>
+  </g>
+  <g fill="#94a3b8" opacity="0.6">
+    <circle cx="160" cy="200" r="6"/><circle cx="250" cy="220" r="5"/><circle cx="410" cy="200" r="7"/>
+    <circle cx="490" cy="300" r="6"/><circle cx="120" cy="300" r="5"/>
+  </g>
+  <text x="300" y="35" font-family="system-ui,Segoe UI,Arial" font-size="22" text-anchor="middle" fill="#334155">Wintergarten — Vorher</text>
 </svg>
