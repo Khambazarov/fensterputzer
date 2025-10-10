@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import BeforeAfter from "../components/BeforeAfter.astro";
 ---
 
 <Layout
@@ -204,8 +205,7 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 
-
-    <!-- GALERIE -->
+      <!-- GALERIE -->
   <section id="galerie" class="scroll-mt-24 py-16 md:py-20 border-t border-slate-200 bg-slate-50/60">
     <div class="mx-auto max-w-6xl">
       <h2 class="text-2xl md:text-3xl font-bold">Galerie</h2>
@@ -213,94 +213,33 @@ import Layout from "../layouts/Layout.astro";
         Vorher&nbsp;/&nbsp;Nachher – echte Ergebnisse aus Hamburg &amp; Norderstedt.
       </p>
 
-      <!-- Grid: mobil 1, ab sm 2, ab lg 3 Spalten -->
       <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <!-- Card 1 -->
-        <figure class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-          <figcaption class="mb-3 text-sm font-medium text-slate-700">
-            Terrassendach aus Glas
-          </figcaption>
-          <div class="grid grid-cols-2 gap-2">
-            <div class="relative">
-              <span class="absolute left-2 top-2 z-10 rounded bg-rose-600 px-2 py-0.5 text-xs font-semibold text-white">Vorher</span>
-              <img
-                src="/gallery/terrasse-vorher.jpg"
-                alt="Terrassendach vor der Reinigung – Verschmutzungen sichtbar"
-                class="aspect-[4/3] w-full rounded object-cover"
-                loading="lazy"
-                width="600" height="450"
-              />
-            </div>
-            <div class="relative">
-              <span class="absolute left-2 top-2 z-10 rounded bg-emerald-600 px-2 py-0.5 text-xs font-semibold text-white">Nachher</span>
-              <img
-                src="/gallery/terrasse-nachher.jpg"
-                alt="Terrassendach nach der Reinigung – streifenfrei sauber"
-                class="aspect-[4/3] w-full rounded object-cover"
-                loading="lazy"
-                width="600" height="450"
-              />
-            </div>
-          </div>
-        </figure>
+        <BeforeAfter
+          label="Terrassendach aus Glas"
+          before="/gallery/terrasse-vorher.jpg"
+          after="/gallery/terrasse-nachher.jpg"
+          altBefore="Terrassendach vor der Reinigung – Verschmutzungen sichtbar"
+          altAfter="Terrassendach nach der Reinigung – streifenfrei sauber"
+          width={600} height={450}
+        />
 
-        <!-- Card 2 -->
-        <figure class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-          <figcaption class="mb-3 text-sm font-medium text-slate-700">
-            Wintergarten
-          </figcaption>
-          <div class="grid grid-cols-2 gap-2">
-            <div class="relative">
-              <span class="absolute left-2 top-2 z-10 rounded bg-rose-600 px-2 py-0.5 text-xs font-semibold text-white">Vorher</span>
-              <img
-                src="/gallery/wintergarten-vorher.jpg"
-                alt="Wintergarten vor der Reinigung"
-                class="aspect-[4/3] w-full rounded object-cover"
-                loading="lazy"
-                width="600" height="450"
-              />
-            </div>
-            <div class="relative">
-              <span class="absolute left-2 top-2 z-10 rounded bg-emerald-600 px-2 py-0.5 text-xs font-semibold text-white">Nachher</span>
-              <img
-                src="/gallery/wintergarten-nachher.jpg"
-                alt="Wintergarten nach der Reinigung"
-                class="aspect-[4/3] w-full rounded object-cover"
-                loading="lazy"
-                width="600" height="450"
-              />
-            </div>
-          </div>
-        </figure>
+        <BeforeAfter
+          label="Wintergarten"
+          before="/gallery/wintergarten-vorher.jpg"
+          after="/gallery/wintergarten-nachher.jpg"
+          altBefore="Wintergarten vor der Reinigung"
+          altAfter="Wintergarten nach der Reinigung"
+          width={600} height={450}
+        />
 
-        <!-- Card 3 -->
-        <figure class="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-          <figcaption class="mb-3 text-sm font-medium text-slate-700">
-            Schaufenster
-          </figcaption>
-          <div class="grid grid-cols-2 gap-2">
-            <div class="relative">
-              <span class="absolute left-2 top-2 z-10 rounded bg-rose-600 px-2 py-0.5 text-xs font-semibold text-white">Vorher</span>
-              <img
-                src="/gallery/schaufenster-vorher.jpg"
-                alt="Schaufenster vor der Reinigung"
-                class="aspect-[4/3] w-full rounded object-cover"
-                loading="lazy"
-                width="600" height="450"
-              />
-            </div>
-            <div class="relative">
-              <span class="absolute left-2 top-2 z-10 rounded bg-emerald-600 px-2 py-0.5 text-xs font-semibold text-white">Nachher</span>
-              <img
-                src="/gallery/schaufenster-nachher.jpg"
-                alt="Schaufenster nach der Reinigung"
-                class="aspect-[4/3] w-full rounded object-cover"
-                loading="lazy"
-                width="600" height="450"
-              />
-            </div>
-          </div>
-        </figure>
+        <BeforeAfter
+          label="Schaufenster"
+          before="/gallery/schaufenster-vorher.jpg"
+          after="/gallery/schaufenster-nachher.jpg"
+          altBefore="Schaufenster vor der Reinigung"
+          altAfter="Schaufenster nach der Reinigung"
+          width={600} height={450}
+        />
       </div>
 
       <p class="mt-6 text-sm text-slate-500">
