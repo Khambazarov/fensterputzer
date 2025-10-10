@@ -1,5 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900">
+<!-- <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900">
   <rect width="100%" height="100%" fill="#e2e8f0"/>
   <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
         font-family="system-ui" font-size="48" fill="#334155">VORHER · SCHAUFENSTER</text>
+</svg> -->
+
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="450" viewBox="0 0 600 450">
+  <rect width="600" height="450" fill="#e5e7eb"/>
+  <rect x="70" y="90" width="460" height="260" fill="#cbd5e1" stroke="#94a3b8"/>
+  <rect x="70" y="350" width="460" height="20" fill="#94a3b8"/>
+  <!-- smudges -->
+  <g fill="#94a3b8" opacity="0.6">
+    <ellipse cx="170" cy="190" rx="16" ry="7"/><ellipse cx="250" cy="220" rx="12" ry="5"/>
+    <ellipse cx="410" cy="210" rx="18" ry="8"/><ellipse cx="470" cy="260" rx="10" ry="4"/>
+  </g>
+  <text x="300" y="35" font-family="system-ui,Segoe UI,Arial" font-size="22" text-anchor="middle" fill="#334155">Schaufenster — Vorher</text>
 </svg>
