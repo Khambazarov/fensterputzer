@@ -1,5 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900">
+<!-- <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900">
   <rect width="100%" height="100%" fill="#d1fae5"/>
   <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
         font-family="system-ui" font-size="48" fill="#065f46">VORHER · WINTERGARTEN</text>
+</svg> -->
+
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="450" viewBox="0 0 600 450">
+  <rect width="600" height="450" fill="#f8fafc"/>
+  <g stroke="#38bdf8" fill="#e0f2fe">
+    <rect x="70" y="80" width="460" height="280" rx="8"/>
+    <line x1="70" y1="170" x2="530" y2="170"/><line x1="70" y1="260" x2="530" y2="260"/>
+    <line x1="200" y1="80" x2="200" y2="360"/><line x1="330" y1="80" x2="330" y2="360"/><line x1="460" y1="80" x2="460" y2="360"/>
+  </g>
+  <path d="M530 90 l-40 0 40-40z" fill="#fff" opacity="0.7"/>
+  <circle cx="480" cy="120" r="6" fill="#fff"/><circle cx="482" cy="118" r="3" fill="#bae6fd"/>
+  <text x="300" y="35" font-family="system-ui,Segoe UI,Arial" font-size="22" text-anchor="middle" fill="#0f172a">Wintergarten — Nachher</text>
 </svg>
