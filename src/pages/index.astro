@@ -501,7 +501,12 @@ import BeforeAfter from "../components/BeforeAfter.astro";
           <label for="wunschtermin" class="font-medium">Wunschtermin (optional)</label>
           <input id="wunschtermin" name="wunschtermin" type="date"
                  class="rounded border px-3 py-2 outline-none focus:ring-2 focus:ring-blue-600" />
-          <!-- Hinweis: type="date" nutzt den nativen Kalender des Geräts – schnell & barrierearm -->
+        </div>
+
+        <div class="grid gap-1">
+          <label for="wunschzeit" class="font-medium">Uhrzeit (optional)</label>
+          <input id="wunschzeit" name="wunschzeit" type="time"
+                 class="rounded border px-3 py-2 outline-none focus:ring-2 focus:ring-blue-600" />
         </div>
 
         <div class="grid gap-1">
