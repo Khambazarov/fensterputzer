@@ -1,21 +1,39 @@
-<div class="fixed bottom-20 right-4 z-50 flex flex-col gap-4 md:hidden bg-slate-900/10 px-2 py-6 rounded-lg shadow-lg backdrop-blur-sm">
-  <!-- WhatsApp: offizielle SVG, nicht verändern -->
-  <a
-    href="https://wa.me/4917629633132?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Fensterreinigung."
-    target="_blank" rel="noopener noreferrer"
-    class="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] shadow-lg shadow-[#25D366]/30
-           hover:brightness-95 active:brightness-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]/60 transition"
-    aria-label="Per WhatsApp anfragen"
+<!-- Mobile FABs (Glass Panel) -->
+<div
+  class="fixed right-0 z-50 lg:hidden pointer-events-none"
+  style="bottom:calc(5rem + env(safe-area-inset-bottom))"
+>
+  <div
+    class="pointer-events-auto flex flex-col gap-6 rounded-2xl border border-white/20
+           bg-white/10 dark:bg-slate-900/30 backdrop-blur-md shadow-xl px-2 py-6
+           ring-1 ring-black/5"
   >
-    <img src="/icons/whatsapp.svg" alt="" aria-hidden="true" class="h-12 w-12" />
-  </a>
+    <!-- WhatsApp -->
+    <a
+      href="https://wa.me/4917629633132?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Fensterreinigung."
+      target="_blank" rel="noopener noreferrer"
+      class="flex h-14 w-14 items-center justify-center rounded-full
+             bg-[#25D366] shadow-lg shadow-[#25D366]/30
+             transition will-change-transform hover:brightness-95 active:brightness-90 active:translate-y-px
+             focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]/60"
+      aria-label="Per WhatsApp anfragen"
+    >
+      <!-- Icon: transparentes SVG, damit der grüne Button durchscheint -->
+      <img src="/icons/whatsapp.svg" alt="" aria-hidden="true" class="h-14 w-14" />
+    </a>
 
-  <!-- Telefon -->
-  <a
-    href="tel:+4917629633132"
-    class="flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 shadow-lg hover:bg-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600/60 transition"
-    aria-label="Anrufen"
-  >
-    <img src="/icons/phone.svg" alt="" aria-hidden="true" class="h-8 w-8 text-white" />
-  </a>
+    <!-- Telefon -->
+    <a
+      href="tel:+4917629633132"
+      class="flex h-14 w-14 items-center justify-center rounded-full
+             bg-blue-600 shadow-lg shadow-blue-600/25
+             transition will-change-transform hover:bg-blue-700 active:bg-blue-800 active:translate-y-px
+             focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600/60"
+      aria-label="Anrufen"
+    >
+      <!-- Inline-SVG: garantiert weiß, crisp im Dark/Light -->
+      <img src="/icons/phone.svg" alt="" aria-hidden="true" class="h-8 w-8 text-white" />
+    </a>
+  </div>
 </div>
+
