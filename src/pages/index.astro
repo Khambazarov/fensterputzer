@@ -579,15 +579,15 @@ import BeforeAfter from "../components/BeforeAfter.astro";
             // Zeit auf volle Stunden runden/prüfen (falls Browser freie Eingabe zulässt)
             function validateTime(){
               if (!time || !time.value) { if(time) time.setCustomValidity(''); return; }
-              const parts = time.value.split(':'); const t H = +parts[0], M = +parts[1];
-              const t total = H*60 + (isFinite(M)?M:0);
+              const parts = time.value.split(':'); const H = +parts[0], M = +parts[1];
+              const total = H*60 + (isFinite(M)?M:0);
               if (total < 360) total = 360; if (total > 1080) total = 1080;
 
-              const t rounded = Math.round(total/30)*30;
+              const rounded = Math.round(total/30)*30;
               const rh = String(Math.floor(rounded/60)).padStart(2,'0');
               const rm = String(rounded % 60).padStart(2,'0'); // "00" oder "30"
               time.value = rh + ':' + rm;
-              const t ok = /^((0[6-9]|1[0-7]):(00|30)|18:00)$/.test(time.value);
+              const ok = /^((0[6-9]|1[0-7]):(00|30)|18:00)$/.test(time.value);
               time.setCustomValidity(ok ? '' : 'Bitte volle Stunden zwischen 06:00 und 18:00 wählen.');
             }
 
