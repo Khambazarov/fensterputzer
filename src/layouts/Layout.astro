@@ -4,6 +4,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";  // <-- neu
 const { title = "Fensterreinigung Hamburg & Norderstedt – [Name]", description = "Professionelle Fensterreinigung für privat & gewerblich in Hamburg und Norderstedt. Schnell, sauber, fair." } = Astro.props;
 const canonical = Astro.url?.href ?? "/";
+import FloatButtons from "../components/FloatButtons.astro";
 ---
 
 <!doctype html>
@@ -57,5 +58,6 @@ const canonical = Astro.url?.href ?? "/";
       </main>
       <Footer />
     </div>
+    <FloatButtons />
   </body>
 </html>
