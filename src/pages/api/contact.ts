@@ -109,7 +109,7 @@ export const POST: APIRoute = async ({ request, redirect }) => {
       const mins = minutesFromHHMM(wunschzeit);
       if (mins < 360 || mins > 1080)
         return new Response("Bad Request", { status: 400 }); // 06:00–18:00
-      if (mins % 60 !== 0) return new Response("Bad Request", { status: 400 }); // volle Stunden
+      if (mins % 30 !== 0) return new Response("Bad Request", { status: 400 }); // volle Stunden
     }
 
     // SMTP-Transport (ENV in Netlify setzen!)
