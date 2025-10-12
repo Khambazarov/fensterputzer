@@ -87,12 +87,12 @@ const nav = [
 <!-- Close-Logic: Outside-Click, Escape, Link-Klick; aria-expanded aktuell halten -->
 <script is:inline>
   (function () {
-    var d = document.querySelector('header details[data-burger]');
+    const d = document.querySelector('header details[data-burger]');
     if (!d) return;
 
     // aria-expanded aktualisieren
     d.addEventListener('toggle', function () {
-      var s = d.querySelector('summary');
+      const s = d.querySelector('summary');
       if (s) s.setAttribute('aria-expanded', String(d.open));
     });
 
@@ -109,7 +109,7 @@ const nav = [
 
     // Link-Klick im Menü -> schließen
     d.addEventListener('click', function (e) {
-      var a = e.target && e.target.closest ? e.target.closest('a') : null;
+      const a = e.target && e.target.closest ? e.target.closest('a') : null;
       if (a) d.open = false;
     });
   })();

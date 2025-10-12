@@ -543,30 +543,30 @@ import BeforeAfter from "../components/BeforeAfter.astro";
 
         <script is:inline>
           (function(){
-            var date = document.getElementById('wunschtermin');
-            var time = document.getElementById('wunschzeit');
+            const date = document.getElementById('wunschtermin');
+            const time = document.getElementById('wunschzeit');
             if (!date) return;
 
             // heute (lokal) als min
-            var now = new Date();
-            var yyyy = now.getFullYear();
-            var mm = String(now.getMonth()+1).padStart(2,'0');
-            var dd = String(now.getDate()).padStart(2,'0');
-            var today = yyyy + '-' + mm + '-' + dd;
+            const now = new Date();
+            const yyyy = now.getFullYear();
+            const mm = String(now.getMonth()+1).padStart(2,'0');
+            const dd = String(now.getDate()).padStart(2,'0');
+            const today = yyyy + '-' + mm + '-' + dd;
             date.setAttribute('min', today);
 
             // feste Feiertage: 01-01, 04-05, 12-24, 12-25, 12-26, 12-31
             function isBlockedHoliday(d){
-              var m = d.getMonth()+1; // 1..12
-              var day = d.getDate();
-              var md = (m<10?'0':'')+m + '-' + (day<10?'0':'')+day;
+              const m = d.getMonth()+1; // 1..12
+              const day = d.getDate();
+              const md = (m<10?'0':'')+m + '-' + (day<10?'0':'')+day;
               return md==='01-01' || md==='04-05' || md==='12-24' || md==='12-25' || md==='12-26' || md==='12-31';
             }
 
             function validateDate(){
               if (!date.value) { date.setCustomValidity(''); return; }
-              var d = new Date(date.value + 'T00:00:00');
-              var msg = '';
+              const d = new Date(date.value + 'T00:00:00');
+              const msg = '';
               // in Vergangenheit?
               if (date.value < today) msg = 'Datum darf nicht in der Vergangenheit liegen.';
               // Sonntag?
@@ -579,15 +579,15 @@ import BeforeAfter from "../components/BeforeAfter.astro";
             // Zeit auf volle Stunden runden/prüfen (falls Browser freie Eingabe zulässt)
             function validateTime(){
               if (!time || !time.value) { if(time) time.setCustomValidity(''); return; }
-              var parts = time.value.split(':'); var H = +parts[0], M = +parts[1];
-              var total = H*60 + (isFinite(M)?M:0);
+              const parts = time.value.split(':'); const t H = +parts[0], M = +parts[1];
+              const t total = H*60 + (isFinite(M)?M:0);
               if (total < 360) total = 360; if (total > 1080) total = 1080;
-              
-              var rounded = Math.round(total/30)*30;
-              var rh = String(Math.floor(rounded/60)).padStart(2,'0');
-              var rm = String(rounded % 60).padStart(2,'0'); // "00" oder "30"
+
+              const t rounded = Math.round(total/30)*30;
+              const rh = String(Math.floor(rounded/60)).padStart(2,'0');
+              const rm = String(rounded % 60).padStart(2,'0'); // "00" oder "30"
               time.value = rh + ':' + rm;
-              var ok = /^((0[6-9]|1[0-7]):(00|30)|18:00)$/.test(time.value);
+              const t ok = /^((0[6-9]|1[0-7]):(00|30)|18:00)$/.test(time.value);
               time.setCustomValidity(ok ? '' : 'Bitte volle Stunden zwischen 06:00 und 18:00 wählen.');
             }
 
@@ -602,9 +602,13 @@ import BeforeAfter from "../components/BeforeAfter.astro";
 
         <div class="grid gap-1">
           <label for="nachricht" class="font-medium">Nachricht *</label>
-          <textarea id="nachricht" name="nachricht" required rows="4"
-                    class="rounded border px-3 py-2 outline-none focus:ring-2 focus:ring-blue-600"
-                    placeholder="Kurz: Was soll gereinigt werden? Anzahl/Größe der Fenster, Wintergarten/Terrassendach, Erreichbarkeit …"></textarea>
+          <textarea
+            id="nachricht"
+            name="nachricht"
+            required rows="4"
+            placeholder="Kurz: Was soll gereinigt werden? Anzahl/Größe der Fenster, Wintergarten/Terrassendach, Erreichbarkeit …"
+            class="rounded border px-3 py-2 outline-none focus:ring-2 focus:ring-blue-600"
+          ></textarea>
         </div>
 
         <div class="flex items-start gap-2 text-sm">
