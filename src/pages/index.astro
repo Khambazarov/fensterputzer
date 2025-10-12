@@ -518,27 +518,80 @@ import BeforeAfter from "../components/BeforeAfter.astro";
             type="time"
             min="06:00"
             max="18:00"
-            step="1800"
+            step="3600"
+            list="zeit-slots"
+            pattern="^((0[6-9]|1[0-7]):00|18:00)$"
+            placeholder="z. B. 09:00"
             class="rounded border px-3 py-2 outline-none focus:ring-2 focus:ring-blue-600"
           />
-          <p id="wunsch-hinweis" class="sr-only">
-            Datum darf nicht in der Vergangenheit liegen. Zeiten zwischen 06:00 und 18:00 Uhr, in 30-Minuten-Schritten.
-          </p>
+          <datalist id="zeit-slots">
+            <option value="06:00"></option><option value="07:00"></option>
+            <option value="08:00"></option><option value="09:00"></option>
+            <option value="10:00"></option><option value="11:00"></option>
+            <option value="12:00"></option><option value="13:00"></option>
+            <option value="14:00"></option><option value="15:00"></option>
+            <option value="16:00"></option><option value="17:00"></option>
+            <option value="18:00"></option>
+          </datalist>
         </div>
 
-        <!-- direkt NACH dem Formular oder am Ende der Seite: -->
         <script is:inline>
-          // Setzt "min" des Datumsfeldes auf HEUTE (lokale Zeitzone des Nutzers)
           (function(){
-            const inp = document.getElementById('wunschtermin');
-            if (!inp) return;
-            const now = new Date();
-            // Lokales YYYY-MM-DD erzeugen
-            const yyyy = now.getFullYear();
-            const mm = String(now.getMonth()+1).padStart(2,'0');
-            const dd = String(now.getDate()).padStart(2,'0');
-            const today = `${yyyy}-${mm}-${dd}`;
-            inp.setAttribute('min', today);
+            var date = document.getElementById('wunschtermin');
+            var time = document.getElementById('wunschzeit');
+            if (!date) return;
+
+            // heute (lokal) als min
+            var now = new Date();
+            var yyyy = now.getFullYear();
+            var mm = String(now.getMonth()+1).padStart(2,'0');
+            var dd = String(now.getDate()).padStart(2,'0');
+            var today = yyyy + '-' + mm + '-' + dd;
+            date.setAttribute('min', today);
+
+            // feste Feiertage: 01-01, 04-05, 12-24, 12-25, 12-26, 12-31
+            function isBlockedHoliday(d){
+              var m = d.getMonth()+1; // 1..12
+              var day = d.getDate();
+              var md = (m<10?'0':'')+m + '-' + (day<10?'0':'')+day;
+              return md==='01-01' || md==='04-05' || md==='12-24' || md==='12-25' || md==='12-26' || md==='12-31';
+            }
+
+            function validateDate(){
+              if (!date.value) { date.setCustomValidity(''); return; }
+              var d = new Date(date.value + 'T00:00:00');
+              var msg = '';
+              // in Vergangenheit?
+              if (date.value < today) msg = 'Datum darf nicht in der Vergangenheit liegen.';
+              // Sonntag?
+              else if (d.getDay() === 0) msg = 'Sonntage sind nicht verfügbar.';
+              // feste Feiertage?
+              else if (isBlockedHoliday(d)) msg = 'Ausgewähltes Datum ist nicht verfügbar (Feiertag).';
+              date.setCustomValidity(msg);
+            }
+
+            // Zeit auf volle Stunden runden/prüfen (falls Browser freie Eingabe zulässt)
+            function validateTime(){
+              if (!time || !time.value) { if(time) time.setCustomValidity(''); return; }
+              var parts = time.value.split(':'); var H = +parts[0], M = +parts[1];
+              var total = H*60 + (isFinite(M)?M:0);
+              if (total < 360) total = 360; if (total > 1080) total = 1080;
+              // auf Stunde runden:
+              var rounded = Math.round(total/60)*60;
+              if (rounded < 360) rounded = 360; if (rounded > 1080) rounded = 1080;
+              var rh = String(Math.floor(rounded/60)).padStart(2,'0');
+              var rm = '00';
+              time.value = rh + ':' + rm;
+              var ok = /^((0[6-9]|1[0-7]):00|18:00)$/.test(time.value);
+              time.setCustomValidity(ok ? '' : 'Bitte volle Stunden zwischen 06:00 und 18:00 wählen.');
+            }
+
+            date.addEventListener('change', validateDate);
+            date.addEventListener('blur', validateDate);
+            if (time){
+              time.addEventListener('change', validateTime);
+              time.addEventListener('blur', validateTime);
+            }
           })();
         </script>
 
