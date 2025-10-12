@@ -1,6 +1,7 @@
 ---
 const year = new Date().getFullYear();
 ---
+
 <footer class="mt-16 border-t border-slate-200 dark:border-slate-800">
   <div class="mx-auto max-w-6xl px-4 py-10 grid gap-8 md:grid-cols-3 text-sm">
     <!-- Brand / Kurzinfo -->
@@ -13,10 +14,6 @@ const year = new Date().getFullYear();
         Streifenfreie Fensterreinigung
         <br />
         in Hamburg & Norderstedt.
-      </p>
-
-      <p class="text-slate-500 dark:text-slate-400">
-        © {year} Fensterputzer A&amp;G
       </p>
     </div>
 
@@ -41,4 +38,23 @@ const year = new Date().getFullYear();
       </ul>
     </div>
   </div>
+
+    <!-- Bottom bar: Copyright + Credit -->
+  <div class="border-t border-slate-200 dark:border-slate-800">
+    <div class="mx-auto max-w-6xl px-4 py-4 text-xs flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+      <span class="text-slate-500 dark:text-slate-400">
+        © {year} Fensterreinigung A&G
+      </span>
+
+      <span class="text-slate-500 dark:text-slate-400">
+        Entwickelt von
+        <a href="https://khambazarov.dev" target="_blank" rel="noopener noreferrer"
+           class="font-medium text-slate-700 hover:underline dark:text-slate-200">
+          https://khambazarov.dev
+        </a>
+        <span class="sr-only">(Webentwickler)</span>
+      </span>
+    </div>
+  </div>
+  
 </footer>
