@@ -518,19 +518,25 @@ import BeforeAfter from "../components/BeforeAfter.astro";
             type="time"
             min="06:00"
             max="18:00"
-            step="3600"
+            step="1800"
             list="zeit-slots"
-            pattern="^((0[6-9]|1[0-7]):00|18:00)$"
+            pattern="^((0[6-9]|1[0-7]):(00|30)|18:00)$"
             placeholder="z. B. 09:00"
             class="rounded border px-3 py-2 outline-none focus:ring-2 focus:ring-blue-600"
           />
           <datalist id="zeit-slots">
-            <option value="06:00"></option><option value="07:00"></option>
-            <option value="08:00"></option><option value="09:00"></option>
-            <option value="10:00"></option><option value="11:00"></option>
-            <option value="12:00"></option><option value="13:00"></option>
-            <option value="14:00"></option><option value="15:00"></option>
-            <option value="16:00"></option><option value="17:00"></option>
+            <option value="06:00"></option><option value="06:30"></option>
+            <option value="07:00"></option><option value="07:30"></option>
+            <option value="08:00"></option><option value="08:30"></option>
+            <option value="09:00"></option><option value="09:30"></option>
+            <option value="10:00"></option><option value="10:30"></option>
+            <option value="11:00"></option><option value="11:30"></option>
+            <option value="12:00"></option><option value="12:30"></option>
+            <option value="13:00"></option><option value="13:30"></option>
+            <option value="14:00"></option><option value="14:30"></option>
+            <option value="15:00"></option><option value="15:30"></option>
+            <option value="16:00"></option><option value="16:30"></option>
+            <option value="17:00"></option><option value="17:30"></option>
             <option value="18:00"></option>
           </datalist>
         </div>
@@ -576,13 +582,12 @@ import BeforeAfter from "../components/BeforeAfter.astro";
               var parts = time.value.split(':'); var H = +parts[0], M = +parts[1];
               var total = H*60 + (isFinite(M)?M:0);
               if (total < 360) total = 360; if (total > 1080) total = 1080;
-              // auf Stunde runden:
-              var rounded = Math.round(total/60)*60;
-              if (rounded < 360) rounded = 360; if (rounded > 1080) rounded = 1080;
+              
+              var rounded = Math.round(total/30)*30;
               var rh = String(Math.floor(rounded/60)).padStart(2,'0');
-              var rm = '00';
+              var rm = String(rounded % 60).padStart(2,'0'); // "00" oder "30"
               time.value = rh + ':' + rm;
-              var ok = /^((0[6-9]|1[0-7]):00|18:00)$/.test(time.value);
+              var ok = /^((0[6-9]|1[0-7]):(00|30)|18:00)$/.test(time.value);
               time.setCustomValidity(ok ? '' : 'Bitte volle Stunden zwischen 06:00 und 18:00 wählen.');
             }
 
