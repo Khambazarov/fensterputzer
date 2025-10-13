@@ -553,7 +553,7 @@ import BeforeAfter from "../components/BeforeAfter.astro";
             function validateDate(){
               if (!date.value) { date.setCustomValidity(''); return; }
               const d = new Date(date.value + 'T00:00:00');
-              const msg = '';
+              let msg = '';
               // in Vergangenheit?
               if (date.value < today) msg = 'Datum darf nicht in der Vergangenheit liegen.';
               // Sonntag?
@@ -563,7 +563,7 @@ import BeforeAfter from "../components/BeforeAfter.astro";
               date.setCustomValidity(msg);
             }
 
-            // Zeit auf volle Stunden runden/prüfen (falls Browser freie Eingabe zulässt)
+            // Zeit auf 30 Min. oder volle Std. runden/prüfen (falls Browser freie Eingabe zulässt)
             function validateTime(){
               if (!time || !time.value) { if(time) time.setCustomValidity(''); return; }
               const parts = time.value.split(':'); const H = +parts[0], M = +parts[1];
@@ -575,7 +575,7 @@ import BeforeAfter from "../components/BeforeAfter.astro";
               const rm = String(rounded % 60).padStart(2,'0'); // "00" oder "30"
               time.value = rh + ':' + rm;
               const ok = /^((0[6-9]|1[0-7]):(00|30)|18:00)$/.test(time.value);
-              time.setCustomValidity(ok ? '' : 'Bitte volle Stunden zwischen 06:00 und 18:00 wählen.');
+              time.setCustomValidity(ok ? '' : 'Bitte Zeiten in 30-Min.-Steps zwischen 06:00 und 18:00 wählen.');
             }
 
             date.addEventListener('change', validateDate);
