@@ -26,17 +26,18 @@ const {
     <div class="relative overflow-hidden rounded aspect-[4/3]" data-ba-box>
       <!-- Nachher (unten, voll) -->
       <img
-        src={after} alt="" aria-hidden="true"
+        src={after} alt={altAfter} aria-hidden="true"
         width={width} height={height}
         class="absolute inset-0 h-full w-full object-cover"
         loading="lazy"
       />
       <!-- Vorher (oben, per clip-path maskiert) -->
       <img
-        src={before} alt="" aria-hidden="true"
+        src={before} alt={altBefore} aria-hidden="true"
         width={width} height={height}
         class="absolute inset-0 h-full w-full object-cover pointer-events-none"
         style="clip-path: inset(0 calc(100% - var(--pos)) 0 0);"
+        loading="lazy"
       />
 
       <!-- Divider-Linie + Griff -->
