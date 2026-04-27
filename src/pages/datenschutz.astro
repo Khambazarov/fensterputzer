@@ -4,7 +4,7 @@ import Layout from "../layouts/Layout.astro";
 // const month = String(now.getMonth() + 1).padStart(2, "0")
 // const year = now.getFullYear();
 // const zuletztAktualisiert = `${month}.${year}`;
-const lastUpdate = "2025-10-19";
+const lastUpdate = "27.04.2026";
 ---
 <Layout
   title="Datenschutzerklärung"
@@ -16,14 +16,15 @@ const lastUpdate = "2025-10-19";
       <p><strong>Zuletzt aktualisiert:</strong> { lastUpdate }</p>
 
       <h2>1. Verantwortlicher</h2>
-      <p>
-        Fensterreinigung A&G<br />
-        Inh. Artur Badalov<br />
-        Rathausallee 121<br />
-        22846 Norderstedt<br />
-        Telefon: <a href="tel:+4917629633132">+49&nbsp;176&nbsp;29633132</a><br />
-        E-Mail: <a href="mailto:kontakt@deine-domain.de">kontakt@mail.de</a>
-      </p>
+        <p>
+          Fensterputzer Badalov<br />
+          Inh. Artur Badalov<br />
+          Rathausallee 121<br />
+          22846 Norderstedt<br />
+          Telefon: <a href="tel:+4917629633132">+49&nbsp;176&nbsp;29633132</a><br />
+          E-Mail: <a href="mailto:kontakt@fensterputzer-badalov.de">kontakt@fensterputzer-badalov.de</a><br />
+          Website: <a href="https://fensterputzer-badalov.de">fensterputzer-badalov.de</a>
+        </p>
 
       <h2>2. Zweck, Rechtsgrundlagen, Datenkategorien</h2>
       <h3>2.1 Website-Besuch</h3>
@@ -36,24 +37,37 @@ const lastUpdate = "2025-10-19";
 
       <h3>2.2 Kontaktformular / E-Mail / Telefon / WhatsApp</h3>
       <p>
-        Verarbeitete Daten: Name, Kontaktangaben (E-Mail/Telefon), Nachricht,
-        ggf. Ort/PLZ, Kundentyp (privat/gewerblich).<br />
-        Rechtsgrundlagen: Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche/vertragliche
-        Kommunikation) und lit. a DSGVO (Einwilligung, z. B. bei WhatsApp).<br />
-        Die Bereitstellung ist erforderlich, um Ihre Anfrage zu beantworten.
+        Wenn Sie uns kontaktieren, verarbeiten wir die von Ihnen angegebenen Daten:
+        Name, E-Mail-Adresse, Telefonnummer, Straße, Ort, optional PLZ,
+        Kundentyp, optional Wunschtermin/Uhrzeit sowie Ihre Nachricht.
+      </p>
+      <p>
+        Rechtsgrundlagen sind Art. 6 Abs. 1 lit. b DSGVO für vorvertragliche oder
+        vertragliche Kommunikation sowie Art. 6 Abs. 1 lit. f DSGVO für unser
+        berechtigtes Interesse an einer schnellen und sachgerechten Bearbeitung
+        Ihrer Anfrage. Bei Nutzung von WhatsApp erfolgt die Kommunikation freiwillig.
       </p>
 
       <h2>3. Empfänger / Auftragsverarbeitung</h2>
       <p>
-        E-Mails werden über unseren E-Mail-Dienst (SMTP) versendet und empfangen:
-        <strong>[Provider, z. B. IONOS SE]</strong>. Mit dem Provider besteht ein Vertrag
-        zur Auftragsverarbeitung (Art. 28 DSGVO).
+        Diese Website wird über <strong>Netlify</strong> bereitgestellt. Beim Besuch
+        der Website können technisch notwendige Server-Logdaten verarbeitet werden.
+        Mit dem Hosting-Anbieter besteht – soweit erforderlich – ein Vertrag zur
+        Auftragsverarbeitung nach Art. 28 DSGVO.
+      </p>
+      <p>
+        Die Domain und E-Mail-Kommunikation werden über <strong>IONOS SE</strong>
+        verwaltet. E-Mails aus dem Kontaktformular werden über ein Domain-Postfach
+        versendet und empfangen. Auch hierfür besteht – soweit erforderlich – ein
+        Vertrag zur Auftragsverarbeitung nach Art. 28 DSGVO.
       </p>
       <p>
         Bei Nutzung des WhatsApp-Links kommunizieren Sie über den Dienst der WhatsApp
         Ireland Limited. Es gelten deren Nutzungs- und Datenschutzbedingungen:
-        <a href="https://www.whatsapp.com/legal/privacy-policy-eea" target="_blank" rel="noopener noreferrer">whatsapp.com/legal/privacy-policy-eea</a>.
-        Die Nutzung ist freiwillig; alternativ stehen Telefon/E-Mail/Formular zur Verfügung.
+        <a href="https://www.whatsapp.com/legal/privacy-policy-eea" target="_blank" rel="noopener noreferrer">
+          whatsapp.com/legal/privacy-policy-eea
+        </a>.
+        Die Nutzung ist freiwillig; alternativ stehen Telefon, E-Mail und Kontaktformular zur Verfügung.
       </p>
 
       <h2>4. Drittlandübermittlung</h2>
@@ -67,9 +81,18 @@ const lastUpdate = "2025-10-19";
 
       <h2>5. Speicherdauer</h2>
       <ul>
-        <li>Server-Logdaten: max. 7–30 Tage (Sicherheits-/Fehleranalyse).</li>
-        <li>Anfragen: bis zur abschließenden Bearbeitung, danach entsprechend gesetzlicher Aufbewahrungspflichten (z. B. 6/10 Jahre, wenn es zu einem Auftrag kommt).</li>
-        <li>Einwilligungen (z. B. WhatsApp): bis Widerruf / Nachweisfristen.</li>
+        <li>
+          Server-Logdaten: max. 7–30 Tage (Sicherheits-/Fehleranalyse).
+        </li>
+        <li>
+          Anfragen über Kontaktformular, E-Mail, Telefon oder WhatsApp:
+          bis zur abschließenden Bearbeitung. Kommt es zu einem Auftrag, gelten die
+          gesetzlichen Aufbewahrungspflichten, insbesondere handels- und steuerrechtliche
+          Fristen.
+        </li>
+        <li>
+          Einwilligungen (z. B. WhatsApp): bis Widerruf / Nachweisfristen.
+        </li>
       </ul>
 
       <h2>6. Cookies / Tracking</h2>
