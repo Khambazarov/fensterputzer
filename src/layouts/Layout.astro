@@ -1,14 +1,53 @@
 ---
 import "../styles/global.css";
 import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro"
+import Footer from "../components/Footer.astro";
+import FloatButtons from "../components/FloatButtons.astro";
+
+const businessName = "Fensterputzer Badalov";
+const businessPhone = "+4917629633132";
+const developerName = "Renat Khambazarov";
+const developerUrl = "https://khambazarov.dev";
+
 const {
-  title = "Fensterreinigung Hamburg & Norderstedt – [Name]",
-  description = "Professionelle Fensterreinigung für privat & gewerblich in Hamburg und Norderstedt. Schnell, sauber, fair."
+  title = "Fensterreinigung Hamburg & Norderstedt | Fensterputzer Badalov",
+  description = "Professionelle Fensterreinigung in Hamburg & Norderstedt. Schnell, zuverlässig und fair – jetzt Angebot anfordern oder per WhatsApp kontaktieren.",
 } = Astro.props;
 
-const canonical = Astro.url?.href ?? "/";
-import FloatButtons from "../components/FloatButtons.astro";
+const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url).href;
+const ogImage = new URL("/og-image.jpg", Astro.url).href;
+
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": canonical,
+  name: businessName,
+  url: canonical,
+  telephone: businessPhone,
+  image: ogImage,
+  priceRange: "€€",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Norderstedt",
+    postalCode: "22846",
+    addressCountry: "DE",
+  },
+  areaServed: [
+    "Norderstedt",
+    "Hamburg",
+    "Hamburg Umgebung",
+    "Norderstedt Umgebung",
+  ],
+  founder: {
+    "@type": "Person",
+    name: "Badalov",
+  },
+  creator: {
+    "@type": "Person",
+    name: developerName,
+    url: developerUrl,
+  },
+};
 ---
 
 <!doctype html>
@@ -19,38 +58,31 @@ import FloatButtons from "../components/FloatButtons.astro";
 
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content={developerName} />
     <link rel="canonical" href={canonical} />
 
-    <!-- Author -->
-    <meta name="author" content="Renat Khambazarov" />
-
-    <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
-    <meta property="og:image" content="/og-image.jpg" />
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:image" content={ogImage} />
 
-    <!-- Theme color (Wir fügen später den Toggle hinzu) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
     <meta name="theme-color" content="#ffffff" />
 
-    <!-- JSON-LD Hook (Platzhalter; füllen wir später) -->
-    <script type="application/ld+json">
-      {JSON.stringify({
-        "@context":"https://fensterputzer.netlify.app",
-        "@type":"LocalBusiness",
-        name:"Fensterputzer A&G",
-        url: canonical,
-        telephone:"+4917629633132",
-        address:{ "@type":"PostalAddress", addressLocality:"Norderstedt", postalCode:"22846", addressCountry:"DE" },
-        areaServed:["Hamburg","Norderstedt"],
-        author:{ "@type":"Person", "name": "Renat Khambazarov", "url": "https://khambazarov.dev" },
-      })}
-    </script>
+    <script type="application/ld+json" set:html={JSON.stringify(localBusinessJsonLd)}></script>
   </head>
+
   <body class="min-h-screen bg-white text-slate-900">
-    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:px-3 focus:py-2 focus:bg-yellow-200 focus:text-black rounded">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:rounded focus:bg-yellow-200 focus:px-3 focus:py-2 focus:text-black"
+    >
       Zum Inhalt springen
     </a>
 
@@ -60,8 +92,10 @@ import FloatButtons from "../components/FloatButtons.astro";
       <main id="main">
         <slot />
       </main>
+
       <Footer />
     </div>
+
     <FloatButtons />
   </body>
 </html>
