@@ -5,7 +5,7 @@ import sitemap from "@astrojs/sitemap";
 import netlify from "@astrojs/netlify/functions"; // <- Node Functions (nicht Edge)
 
 export default defineConfig({
-  site: "https://fensterputzer.netlify.app", // später auf eigene Domain ändern
+  site: "https://fensterputzer-badalov.de",
   integrations: [sitemap()],
   adapter: netlify({}), // Functions-Modus (für Nodemailer)
   vite: { plugins: [tailwind()] },

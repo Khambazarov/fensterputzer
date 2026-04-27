@@ -159,7 +159,7 @@ import BeforeAfter from "../components/BeforeAfter.astro";
           </p>
         </article> -->
 
-        <!-- Terrassen-/Glasdach -->
+        <!-- Vordach -->
         <!-- <article class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md">
           <h3 class="font-semibold text-slate-900">Terrassen-/Glasdach</h3>
           <p class="mt-2 text-2xl font-bold text-slate-900">ab 5–15&nbsp;€ / m²</p>
@@ -209,32 +209,41 @@ import BeforeAfter from "../components/BeforeAfter.astro";
 
       <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <BeforeAfter
-          label="Terrassendach aus Glas"
+          label="Vordach aus Glas"
+          before="/gallery/vorher-vordach.png"
+          after="/gallery/nachher-vordach.png"
+          altBefore="Vordach vor der Reinigung – Verschmutzungen sichtbar"
+          altAfter="Vordach nach der Reinigung – streifenfrei sauber"
+          width={600} height={450}
+        />
+        
+        <BeforeAfter
+          label="Terrassendach"
           before="/gallery/vorher-terrassendach.png"
           after="/gallery/nachher-terrassendach.png"
-          altBefore="Terrassendach vor der Reinigung – Verschmutzungen sichtbar"
-          altAfter="Terrassendach nach der Reinigung – streifenfrei sauber"
+          altBefore="Terrassendach vor der Reinigung"
+          altAfter="Terrassendach nach der Reinigung"
           width={600} height={450}
         />
 
         <BeforeAfter
+          label="Terrassendach"
+          before="/gallery/vorher-terrassendach2.png"
+          after="/gallery/nachher-terrassendach2.png"
+          altBefore="Terrassendach vor der Reinigung"
+          altAfter="Terrassendach nach der Reinigung"
+          width={600} height={450}
+        />
+
+        <!-- <BeforeAfter
           label="Wintergarten"
-          before="/gallery/wintergarten-vorher.svg"
-          after="/gallery/wintergarten-nachher.svg"
+          before="/gallery/wintergarten-vorher.png"
+          after="/gallery/wintergarten-nachher.png"
           altBefore="Wintergarten vor der Reinigung"
           altAfter="Wintergarten nach der Reinigung"
           width={600} height={450}
         />
-
-        <BeforeAfter
-          label="Schaufenster"
-          before="/gallery/schaufenster-vorher.svg"
-          after="/gallery/schaufenster-nachher.svg"
-          altBefore="Schaufenster vor der Reinigung"
-          altAfter="Schaufenster nach der Reinigung"
-          width={600} height={450}
-        />
-      </div>
+      </div> -->
 
       <p class="text-balance mt-6 text-sm text-slate-500">
         Tipp: Weitere Beispiele schicken wir gern per WhatsApp oder E-Mail.
