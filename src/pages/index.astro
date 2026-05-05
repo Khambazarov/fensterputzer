@@ -63,6 +63,119 @@ import BeforeAfter from "../components/BeforeAfter.astro";
     </div>
   </section>
 
+        <!-- GALERIE -->
+  <section id="galerie" class="scroll-mt-24 py-8 md:py-12 border-t border-slate-200 bg-slate-50/60">
+    <div class="mx-auto max-w-6xl">
+      <h2 class="text-2xl md:text-3xl font-bold">Galerie</h2>
+      <p class="text-balance mt-3 text-slate-600">
+        Vorher&nbsp;/&nbsp;Nachher – echte Ergebnisse aus Hamburg & Norderstedt.
+      </p>
+
+      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <BeforeAfter
+          label="Vordach aus Glas"
+          before="/gallery/vorher-vordach.png"
+          after="/gallery/nachher-vordach.png"
+          altBefore="Vordach vor der Reinigung – Verschmutzungen sichtbar"
+          altAfter="Vordach nach der Reinigung – streifenfrei sauber"
+          width={600} height={450}
+        />
+        
+        <BeforeAfter
+          label="Terrassendach"
+          before="/gallery/vorher-terrassendach.png"
+          after="/gallery/nachher-terrassendach.png"
+          altBefore="Terrassendach vor der Reinigung"
+          altAfter="Terrassendach nach der Reinigung"
+          width={600} height={450}
+        />
+
+        <BeforeAfter
+          label="Terrassendach"
+          before="/gallery/vorher-terrassendach2.png"
+          after="/gallery/nachher-terrassendach2.png"
+          altBefore="Terrassendach vor der Reinigung"
+          altAfter="Terrassendach nach der Reinigung"
+          width={600} height={450}
+        />
+
+        <!-- <BeforeAfter
+          label="Wintergarten"
+          before="/gallery/wintergarten-vorher.png"
+          after="/gallery/wintergarten-nachher.png"
+          altBefore="Wintergarten vor der Reinigung"
+          altAfter="Wintergarten nach der Reinigung"
+          width={600} height={450}
+        />
+      </div> -->
+
+      <!-- <p class="text-balance mt-6 text-sm text-slate-500">
+        Tipp: Weitere Beispiele schicken wir gern per WhatsApp oder E-Mail.
+      </p> -->
+    </div>
+  </section>
+
+    <!-- BEWERTUNGEN -->
+  <!-- <section id="bewertungen" class="scroll-mt-24 py-8 md:py-12 border-t border-slate-200 bg-slate-50/60"> -->
+    <!-- <div class="mx-auto max-w-6xl"> -->
+      <!-- <h2 class="text-2xl md:text-3xl font-bold">Bewertungen</h2> -->
+      <!-- <p class="mt-3 text-slate-600">
+        Zufriedene Kunden in Hamburg & Norderstedt.
+      </p> -->
+
+      <!-- Rating-Badge (statisch, später echte Zahl/Link einfügen) -->
+      <!-- <div class="mt-6 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm">
+        <span class="font-semibold text-slate-900">★ 4,9 / 5,0</span>
+        <span class="text-slate-500">(Google)</span>
+        <a href="#kontakt" class="ml-2 text-blue-600 hover:underline">Jetzt Angebot anfragen</a>
+      </div> -->
+
+      <!-- Testimonials -->
+      <!-- <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <figure class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+          <blockquote class="text-slate-700">
+            „Schnell Termin bekommen, sehr freundlich und top Ergebnis. Unsere
+            Terrassenfenster sehen aus wie neu.“
+          </blockquote>
+          <figcaption class="mt-4 text-sm text-slate-500">— Anna K., Hamburg</figcaption>
+        </figure>
+
+        <figure class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+          <blockquote class="text-slate-700">
+            „Pünktlich, sauber, fairer Preis. Wintergarten komplett gereinigt.
+            Absolute Empfehlung.“
+          </blockquote>
+          <figcaption class="mt-4 text-sm text-slate-500">— Familie R., Norderstedt</figcaption>
+        </figure>
+
+        <figure class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+          <blockquote class="text-slate-700">
+            „Sehr zuverlässig im Büroobjekt. Regelmäßige Fensterreinigung ohne
+            Störungen im Ablauf.“
+          </blockquote>
+          <figcaption class="mt-4 text-sm text-slate-500">— M. Schröder, Hamburg</figcaption>
+        </figure>
+      </div> -->
+
+      <!-- CTA -->
+      <!-- <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <a
+          href="#kontakt"
+          class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-5 py-3 font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white"
+        >
+          Kontakt aufnehmen
+        </a>
+        <a
+          href="https://wa.me/4917629633132?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihre%20Fensterreinigung%20in%20Hamburg%20und%20Norderstedt."
+          target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center justify-center rounded-lg border border-green-600 px-5 py-3 font-medium text-green-700 hover:bg-green-50 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2 focus:ring-offset-white"
+        >
+          WhatsApp
+        </a>
+      </div> -->
+    <!-- </div> -->
+  <!-- </section> -->
+
       <!-- LEISTUNGEN -->
   <section id="leistungen" class="scroll-mt-24 py-8 md:py-12 border-t border-slate-200 bg-slate-50/60">
     <div class="mx-auto max-w-6xl">
@@ -196,119 +309,6 @@ import BeforeAfter from "../components/BeforeAfter.astro";
         Fragen zu Preisen?
         <a href="#kontakt" class="text-blue-600 underline">Kontakt aufnehmen</a>
       </p> -->
-    <!-- </div> -->
-  <!-- </section> -->
-
-      <!-- GALERIE -->
-  <section id="galerie" class="scroll-mt-24 py-8 md:py-12 border-t border-slate-200 bg-slate-50/60">
-    <div class="mx-auto max-w-6xl">
-      <h2 class="text-2xl md:text-3xl font-bold">Galerie</h2>
-      <p class="text-balance mt-3 text-slate-600">
-        Vorher&nbsp;/&nbsp;Nachher – echte Ergebnisse aus Hamburg & Norderstedt.
-      </p>
-
-      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <BeforeAfter
-          label="Vordach aus Glas"
-          before="/gallery/vorher-vordach.png"
-          after="/gallery/nachher-vordach.png"
-          altBefore="Vordach vor der Reinigung – Verschmutzungen sichtbar"
-          altAfter="Vordach nach der Reinigung – streifenfrei sauber"
-          width={600} height={450}
-        />
-        
-        <BeforeAfter
-          label="Terrassendach"
-          before="/gallery/vorher-terrassendach.png"
-          after="/gallery/nachher-terrassendach.png"
-          altBefore="Terrassendach vor der Reinigung"
-          altAfter="Terrassendach nach der Reinigung"
-          width={600} height={450}
-        />
-
-        <BeforeAfter
-          label="Terrassendach"
-          before="/gallery/vorher-terrassendach2.png"
-          after="/gallery/nachher-terrassendach2.png"
-          altBefore="Terrassendach vor der Reinigung"
-          altAfter="Terrassendach nach der Reinigung"
-          width={600} height={450}
-        />
-
-        <!-- <BeforeAfter
-          label="Wintergarten"
-          before="/gallery/wintergarten-vorher.png"
-          after="/gallery/wintergarten-nachher.png"
-          altBefore="Wintergarten vor der Reinigung"
-          altAfter="Wintergarten nach der Reinigung"
-          width={600} height={450}
-        />
-      </div> -->
-
-      <!-- <p class="text-balance mt-6 text-sm text-slate-500">
-        Tipp: Weitere Beispiele schicken wir gern per WhatsApp oder E-Mail.
-      </p> -->
-    </div>
-  </section>
-
-    <!-- BEWERTUNGEN -->
-  <!-- <section id="bewertungen" class="scroll-mt-24 py-8 md:py-12 border-t border-slate-200 bg-slate-50/60"> -->
-    <!-- <div class="mx-auto max-w-6xl"> -->
-      <!-- <h2 class="text-2xl md:text-3xl font-bold">Bewertungen</h2> -->
-      <!-- <p class="mt-3 text-slate-600">
-        Zufriedene Kunden in Hamburg & Norderstedt.
-      </p> -->
-
-      <!-- Rating-Badge (statisch, später echte Zahl/Link einfügen) -->
-      <!-- <div class="mt-6 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm">
-        <span class="font-semibold text-slate-900">★ 4,9 / 5,0</span>
-        <span class="text-slate-500">(Google)</span>
-        <a href="#kontakt" class="ml-2 text-blue-600 hover:underline">Jetzt Angebot anfragen</a>
-      </div> -->
-
-      <!-- Testimonials -->
-      <!-- <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <figure class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-          <blockquote class="text-slate-700">
-            „Schnell Termin bekommen, sehr freundlich und top Ergebnis. Unsere
-            Terrassenfenster sehen aus wie neu.“
-          </blockquote>
-          <figcaption class="mt-4 text-sm text-slate-500">— Anna K., Hamburg</figcaption>
-        </figure>
-
-        <figure class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-          <blockquote class="text-slate-700">
-            „Pünktlich, sauber, fairer Preis. Wintergarten komplett gereinigt.
-            Absolute Empfehlung.“
-          </blockquote>
-          <figcaption class="mt-4 text-sm text-slate-500">— Familie R., Norderstedt</figcaption>
-        </figure>
-
-        <figure class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-          <blockquote class="text-slate-700">
-            „Sehr zuverlässig im Büroobjekt. Regelmäßige Fensterreinigung ohne
-            Störungen im Ablauf.“
-          </blockquote>
-          <figcaption class="mt-4 text-sm text-slate-500">— M. Schröder, Hamburg</figcaption>
-        </figure>
-      </div> -->
-
-      <!-- CTA -->
-      <!-- <div class="mt-8 flex flex-col sm:flex-row gap-3">
-        <a
-          href="#kontakt"
-          class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-5 py-3 font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white"
-        >
-          Kontakt aufnehmen
-        </a>
-        <a
-          href="https://wa.me/4917629633132?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihre%20Fensterreinigung%20in%20Hamburg%20und%20Norderstedt."
-          target="_blank" rel="noopener noreferrer"
-          class="inline-flex items-center justify-center rounded-lg border border-green-600 px-5 py-3 font-medium text-green-700 hover:bg-green-50 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2 focus:ring-offset-white"
-        >
-          WhatsApp
-        </a>
-      </div> -->
     <!-- </div> -->
   <!-- </section> -->
 
